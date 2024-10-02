@@ -1,13 +1,80 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablero de Puntos</title>
+    <title>Sistema de Puntuación para Competencias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
-    <footer></footer> 
+    <div class="container">
+        <h1>Sistema de Puntuación para Competencias</h1>
+        
+        <div class="team-container">
+            <h2>Equipo A</h2>
+            <table id="equipoATable">
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Puntuación</th>
+                    <th>Acción</th>
+                </tr>
+                <tr>
+                    <td>Handball</td>
+                    <td id="equipoA-handball">0</td>
+                    <td><input type="number" id="inputA-handball" min="0"><button id="btnA-handball">Agregar</button></td>
+                </tr>
+                <tr>
+                    <td>Resistencia</td>
+                    <td id="equipoA-resistencia">0</td>
+                    <td><input type="number" id="inputA-resistencia" min="0"><button id="btnA-resistencia">Agregar</button></td>
+                </tr>
+                <tr>
+                    <td>Ajedrez</td>
+                    <td id="equipoA-ajedrez">0</td>
+                    <td><input type="number" id="inputA-ajedrez" min="0"><button id="btnA-ajedrez">Agregar</button></td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="equipoA-total">0</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="team-container">
+            <h2>Equipo B</h2>
+            <table id="equipoBTable">
+                <tr>
+                    <th>Disciplina</th>
+                    <th>Puntuación</th>
+                    <th>Acción</th>
+                </tr>
+                <tr>
+                    <td>Handball</td>
+                    <td id="equipoB-handball">0</td>
+                    <td><input type="number" id="inputB-handball" min="0"><button id="btnB-handball">Agregar</button></td>
+                </tr>
+                <tr>
+                    <td>Resistencia</td>
+                    <td id="equipoB-resistencia">0</td>
+                    <td><input type="number" id="inputB-resistencia" min="0"><button id="btnB-resistencia">Agregar</button></td>
+                </tr>
+                <tr>
+                    <td>Ajedrez</td>
+                    <td id="equipoB-ajedrez">0</td>
+                    <td><input type="number" id="inputB-ajedrez" min="0"><button id="btnB-ajedrez">Agregar</button></td>
+                </tr>
+                <tr>
+                    <td><strong>Total</strong></td>
+                    <td id="equipoB-total">0</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="results" id="resultados"></div>
+    </div>
+
+    <script src="primerarchivo.ts"></script>
 </body>
 </html>
