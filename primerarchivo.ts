@@ -90,11 +90,11 @@ function agregarPuntos(equipo: string, disciplina: keyof Equipo['puntos']) {
     }
 }
 
-// Inicializar la aplicación
+
 window.onload = () => {
     competencia.mostrarResultados();
 
-    // Agregar event listeners a todos los botones
+
     const equipos = ['A', 'B'];
     const disciplinas = ['handball', 'resistencia', 'ajedrez'];
 
@@ -108,5 +108,4 @@ window.onload = () => {
     });
 };
 
-// Agregar la función agregarPuntos al objeto window para que sea accesible globalmente
 (window as any).agregarPuntos = agregarPuntos;
