@@ -7,13 +7,13 @@ interface Equipo {
     };
 }
 
-class Competencia {
+class Intertribus {
     private equipos: { [key: string]: Equipo };
 
     constructor() {
         this.equipos = {
-            A: { nombre: "Equipo A", puntos: { handball: 0, resistencia: 0, ajedrez: 0 } },
-            B: { nombre: "Equipo B", puntos: { handball: 0, resistencia: 0, ajedrez: 0 } }
+            A: { nombre: "Tribu negra", puntos: { handball: 0, resistencia: 0, ajedrez: 0 } },
+            B: { nombre: "Tribu roja ", puntos: { handball: 0, resistencia: 0, ajedrez: 0 } }
         };
     }
 
@@ -79,7 +79,7 @@ class Competencia {
     }
 }
 
-const competencia = new Competencia();
+const Intertribus = new Competencia();
 
 function agregarPuntos(equipo: string, disciplina: keyof Equipo['puntos']) {
     const input = document.getElementById(`input${equipo}-${disciplina}`) as HTMLInputElement;
