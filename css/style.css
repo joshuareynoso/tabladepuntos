@@ -7,17 +7,30 @@ body {
     background-color: #f4f4f4; 
 }
 
-.Tablad_e_Puntos {
+.Tabla_de_negros{
     max-width: 800px; 
     margin: auto; 
-    background: white; 
+    background: rgb(44, 43, 43); 
     padding: 20px; 
     border-radius: 5px; 
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    color: #f4f4f4;
+    
+}
+.Tabla_de_rojos{
+    max-width: 800px; 
+    margin: auto; 
+    background: rgb(228, 56, 56); 
+    padding: 20px; 
+    border-radius: 5px; 
+    color: rgb(247, 238, 238);
+   
 }
 
+.th1{
+    background-color: #e71515; 
+}
 h1, h2 {
-    color: #333; 
+    color: #faf9f9; 
     text-align: center; 
 }
 
@@ -35,7 +48,7 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2; 
+    background-color: #000000; 
 }
 
 

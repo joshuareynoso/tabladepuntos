@@ -7,73 +7,76 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="Tabla_de_Puntos">
+    <header>
         <h1>Tabla de Puntos</h1>
-        
-    
+    </header>  
+      
+    <main>    
+        <div class="Tabla_de_negros">        
             <h2>Tribu Negra</h2>
-            <table id="tribuNegra">
-                <tr>
-                    <th>Disciplina</th>
-                    <th>Puntuación</th>
-                    <th>Acción</th>
-                </tr>
-                <tr>
-                    <td>Handball</td>
-                    <td id="tribuNegra-handball">0</td>
-                    <td><input type="number" id="inputNegra-handball" min="0"><button id="btnNegra-handball">Agregar</button></td>
-                </tr>
-                <tr>
-                    <td>Resistencia</td>
-                    <td id="resistencia">0</td>
-                    <td><input type="number" id="inputNegra-resistencia" min="0"><button id="btnNegra-resistencia">Agregar</button></td>
-                </tr>
-                <tr>
-                    <td>Ajedrez</td>
-                    <td id="tribuNegra-ajedrez">0</td>
-                    <td><input type="number" id="inputNegra-ajedrez" min="0"><button id="btnNegra-ajedrez">Agregar</button></td>
-                </tr>
-                <tr>
-                    <td><strong>Total</strong></td>
-                    <td id="tribuNegra-total">0</td>
-                    <td></td>
-                </tr>
-            </table>
-
-     
-            <h2>Tribu Roja</h2>
-            <table id="tribuRoja">
-                <tr>
-                    <th>Disciplina</th>
-                    <th>Puntuación</th>
-                    <th>Acción</th>
-                </tr>
-                <tr>
-                    <td>Handball</td>
-                    <td id="tribuRoja-handball">0</td>
-                    <td><input type="number" id="inputRoja-handball" min="0"><button id="btnRoja-handball">Agregar</button></td>
-                </tr>
-                <tr>
-                    <td>Resistencia</td>
-                    <td id="tribuRoja-resistencia">0</td>
-                    <td><input type="number" id="inputRoja-resistencia" min="0"><button id="btnRoja-resistencia">Agregar</button></td>
-                </tr>
-                <tr>
-                    <td>Ajedrez</td>
-                    <td id="tribuRoja-ajedrez">0</td>
-                    <td><input type="number" id="inputRoja-ajedrez" min="0"><button id="btnRoja-ajedrez">Agregar</button></td>
-                </tr>
-                <tr>
-                    <td><strong>Total</strong></td>
-                    <td id="tribuRoja-total">0</td>
-                    <td></td>
-                </tr>
-            </table>
+                <table id="tribuNegra">
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>Puntuación</th>
+                        <th>Acción</th>
+                    </tr>
+                    <tr>
+                        <td>Handball</td>
+                        <td id="tribuNegra-handball">0</td>
+                        <td><input type="number" id="inputNegra-handball" min="0"><button id="btnNegra-handball">Agregar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Resistencia</td>
+                        <td id="resistencia">0</td>
+                        <td><input type="number" id="inputNegra-resistencia" min="0"><button id="btnNegra-resistencia">Agregar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ajedrez</td>
+                        <td id="tribuNegra-ajedrez">0</td>
+                        <td><input type="number" id="inputNegra-ajedrez" min="0"><button id="btnNegra-ajedrez">Agregar</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td id="tribuNegra-total">0</td>
+                        <td></td>
+                    </tr>
+                </table>
+        </div>
+        <div class="Tabla_de_rojos">
+                <h2>Tribu Roja</h2>
+                <table id="tribuRoja">
+                    <tr>
+                        <th class="th1">Disciplina</th>
+                        <th class="th1">Puntuación</th>
+                        <th class="th1">Acción</th>
+                    </tr>
+                    <tr>
+                        <td>Handball</td>
+                        <td id="tribuRoja-handball">0</td>
+                        <td><input type="number" id="inputRoja-handball" min="0"><button id="btnRoja-handball">Agregar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Resistencia</td>
+                        <td id="tribuRoja-resistencia">0</td>
+                        <td><input type="number" id="inputRoja-resistencia" min="0"><button id="btnRoja-resistencia">Agregar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ajedrez</td>
+                        <td id="tribuRoja-ajedrez">0</td>
+                        <td><input type="number" id="inputRoja-ajedrez" min="0"><button id="btnRoja-ajedrez">Agregar</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td id="tribuRoja-total">0</td>
+                        <td></td>
+                    </tr>
+                </table>
    
-
-        <div class="results" id="resultados"></div>
-    </div>
-
-    <script src="primerarchivo.js"></script>
+            <div class="results" id="resultados"></div>
+        </div>
+    </main>
+    <footer>
+        <script src="primerarchivo.js"></script>
+    </footer> 
 </body>
 </html>
