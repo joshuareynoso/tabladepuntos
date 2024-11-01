@@ -81,3 +81,13 @@ button:hover {
 }
 
 
+
+.Ganador{
+    max-width: 800px; 
+    margin: auto; 
+    background: rgb(248, 243, 243); 
+    padding: 20px; 
+    border-radius: 5px; 
+    color: #000000;
+    
+}

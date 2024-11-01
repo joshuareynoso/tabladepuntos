@@ -58,7 +58,7 @@ btnNegraAjedrez.addEventListener("click", function() {
     inputNegraAjedrez.value = '';
 });
 
-// Eventos para botones de la tribu Roja
+
 btnRojaHandball.addEventListener("click", function() {
     const puntos = parseInt(inputRojaHandball.value) || 0;
     puntuacionRojaHandball.innerText = (parseInt(puntuacionRojaHandball.innerText) + puntos).toString();
