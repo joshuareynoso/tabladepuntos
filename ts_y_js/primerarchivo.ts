@@ -1,93 +1,95 @@
-const puntuacionNegraHandball = document.getElementById("tribuNegra-handball") as HTMLElement;
-const puntuacionNegraResistencia = document.getElementById("resistencia") as HTMLElement;
-const puntuacionNegraAjedrez = document.getElementById("tribuNegra-ajedrez") as HTMLElement;
-const totalNegra = document.getElementById("tribuNegra-total") as HTMLElement;
-const inputNegraHandball = document.getElementById("inputNegra-handball") as HTMLInputElement;
-const inputNegraResistencia = document.getElementById("inputNegra-resistencia") as HTMLInputElement;
-const inputNegraAjedrez = document.getElementById("inputNegra-ajedrez") as HTMLInputElement;
-const btnNegraHandball = document.getElementById("btnNegra-handball") as HTMLButtonElement;
-const btnNegraResistencia = document.getElementById("btnNegra-resistencia") as HTMLButtonElement;
-const btnNegraAjedrez = document.getElementById("btnNegra-ajedrez") as HTMLButtonElement;
+// negra
+const puntuacionNegraHandball = document.getElementById("tribuNegra-handball"); 
+const puntuacionNegraResistencia = document.getElementById("resistencia"); 
+const puntuacionNegraAjedrez = document.getElementById("tribuNegra-ajedrez"); 
+const totalNegra = document.getElementById("tribuNegra-total"); 
 
-const puntuacionRojaHandball = document.getElementById("tribuRoja-handball") as HTMLElement;
-const puntuacionRojaResistencia = document.getElementById("tribuRoja-resistencia") as HTMLElement;
-const puntuacionRojaAjedrez = document.getElementById("tribuRoja-ajedrez") as HTMLElement;
-const totalRoja = document.getElementById("tribuRoja-total") as HTMLElement;
-const inputRojaHandball = document.getElementById("inputRoja-handball") as HTMLInputElement;
-const inputRojaResistencia = document.getElementById("inputRoja-resistencia") as HTMLInputElement;
-const inputRojaAjedrez = document.getElementById("inputRoja-ajedrez") as HTMLInputElement;
-const btnRojaHandball = document.getElementById("btnRoja-handball") as HTMLButtonElement;
-const btnRojaResistencia = document.getElementById("btnRoja-resistencia") as HTMLButtonElement;
-const btnRojaAjedrez = document.getElementById("btnRoja-ajedrez") as HTMLButtonElement;
+//esto es para ingresar los datos de las puntuaciones(negra)
+const inputNegraHandball = document.getElementById("inputNegra-handball");
+const inputNegraResistencia = document.getElementById("inputNegra-resistencia"); 
+const inputNegraAjedrez = document.getElementById("inputNegra-ajedrez");
 
-const btnpuntajeTotal = document.getElementById("")
+// actualiza los balores de los botones(negra)
+const btnNegraHandball = document.getElementById("btnNegra-handball"); 
+const btnNegraResistencia = document.getElementById("btnNegra-resistencia");
+const btnNegraAjedrez = document.getElementById("btnNegra-ajedrez");
 
+//roja
+const puntuacionRojaHandball = document.getElementById("tribuRoja-handball");
+const puntuacionRojaResistencia = document.getElementById("tribuRoja-resistencia"); 
+const puntuacionRojaAjedrez = document.getElementById("tribuRoja-ajedrez");
+const totalRoja = document.getElementById("tribuRoja-total");
 
+//esto es para ingresar los datos de las puntuaciones(roja)
+const inputRojaHandball = document.getElementById("inputRoja-handball"); 
+const inputRojaResistencia = document.getElementById("inputRoja-resistencia");
+const inputRojaAjedrez = document.getElementById("inputRoja-ajedrez");
 
+// actualiza los balores de los botones(roja)
+const btnRojaHandball = document.getElementById("btnRoja-handball"); 
+const btnRojaResistencia = document.getElementById("btnRoja-resistencia");
+const btnRojaAjedrez = document.getElementById("btnRoja-ajedrez");
 
-btnNegraHandball.addEventListener("click", function() {
-    const puntos = parseInt(inputNegraHandball.value) || 0;
-    puntuacionNegraHandball.innerText = (parseInt(puntuacionNegraHandball.innerText) + puntos).toString();
-    totalNegra.innerText = (
-        parseInt(puntuacionNegraHandball.innerText) + 
-        parseInt(puntuacionNegraResistencia.innerText) + 
-        parseInt(puntuacionNegraAjedrez.innerText)
-    ).toString();
-    inputNegraHandball.value = '';
+// bueno esto no hace falta desir que es pero para no mariarme 
+const Tribuganadora = document.getElementById("Ganador");
+
+//esto es bueno esto es lo que es es el ultimo paso de  este programa el "Ganador" O SEA la Tribu negra 
+function compararPuntajes () {
+    const puntajeTotalNegra = parseInt(totalNegra.innerText) || 0;
+    const puntajeTotalRoja = parseInt(totalRoja.innerText) || 0;
+
+    if (puntajeTotalNegra > puntajeTotalRoja) {
+        Tribuganadora = "la tribu ganadora es la Negra";
+    } else if (puntajeTotalRoja > puntajeTotalNegra) {
+        Tribuganadora  = "la tribu ganadora es la Roja";
+    } else {
+        Tribuganadora.innerText = "es un empate";
+    }
+}
+
+// todo este es de la negra 
+btnNegraHandball.addEventListener("click", function () {
+    var puntos = parseInt(inputNegraHandball.value) || 0;
+    puntuacionHandball.innerText = parseInt(puntuacionHandball.innerText) + puntos;
+    totalNegra.innerText = parseInt(puntuacionHandball.innerText) + parseInt(puntuacionNegraResistencia.innerText) + parseInt(puntuacionNegraAjedrez.innerText);
+    compararPuntajes();
 });
-
-btnNegraResistencia.addEventListener("click", function() {
-    const puntos = parseInt(inputNegraResistencia.value) || 0;
-    puntuacionNegraResistencia.innerText = (parseInt(puntuacionNegraResistencia.innerText) + puntos).toString();
-    totalNegra.innerText = (
-        parseInt(puntuacionNegraHandball.innerText) + 
-        parseInt(puntuacionNegraResistencia.innerText) + 
-        parseInt(puntuacionNegraAjedrez.innerText)
-    ).toString();
+btnNegraResistencia.addEventListener("click", function () {
+    var puntos = parseInt(inputNegraResistencia.value) || 0;
+    puntuacionNegraResistencia.innerText = parseInt(puntuacionNegraResistencia.innerText) + puntos;
+    totalNegra.innerText = parseInt(puntuacionNegraHandball.innerText) + parseInt(puntuacionNegraResistencia.innerText) + parseInt(puntuacionNegraAjedrez.innerText);
     inputNegraResistencia.value = '';
+    compararPuntajes();
 });
-
-btnNegraAjedrez.addEventListener("click", function() {
-    const puntos = parseInt(inputNegraAjedrez.value) || 0;
-    puntuacionNegraAjedrez.innerText = (parseInt(puntuacionNegraAjedrez.innerText) + puntos).toString();
-    totalNegra.innerText = (
-        parseInt(puntuacionNegraHandball.innerText) + 
-        parseInt(puntuacionNegraResistencia.innerText) + 
-        parseInt(puntuacionNegraAjedrez.innerText)
-    ).toString();
+btnNegraAjedrez.addEventListener("click", function () {
+    var puntos = parseInt(inputNegraAjedrez.value) || 0;
+    puntuacionNegraAjedrez.innerText = parseInt(puntuacionNegraAjedrez.innerText) + puntos;
+    totalNegra.innerText = parseInt(puntuacionNegraHandball.innerText) + parseInt(puntuacionNegraResistencia.innerText) + parseInt(puntuacionNegraAjedrez.innerText);
     inputNegraAjedrez.value = '';
+    compararPuntajes();
 });
 
+// y todo esto es de la roja 
 
-btnRojaHandball.addEventListener("click", function() {
-    const puntos = parseInt(inputRojaHandball.value) || 0;
-    puntuacionRojaHandball.innerText = (parseInt(puntuacionRojaHandball.innerText) + puntos).toString();
-    totalRoja.innerText = (
-        parseInt(puntuacionRojaHandball.innerText) + 
-        parseInt(puntuacionRojaResistencia.innerText) + 
-        parseInt(puntuacionRojaAjedrez.innerText)
-    ).toString();
+btnRojaHandball.addEventListener("click", function () {
+    var puntos = parseInt(inputRojaHandball.value) || 0;
+    puntuacionRojaHandball.innerText = parseInt(puntuacionRojaHandball.innerText) + puntos;
+    totalRoja.innerText = parseInt(puntuacionRojaHandball.innerText) + parseInt(puntuacionRojaResistencia.innerText) + parseInt(puntuacionRojaAjedrez.innerText);
     inputRojaHandball.value = '';
+    compararPuntajes();
 });
-
-btnRojaResistencia.addEventListener("click", function() {
-    const puntos = parseInt(inputRojaResistencia.value) || 0;
-    puntuacionRojaResistencia.innerText = (parseInt(puntuacionRojaResistencia.innerText) + puntos).toString();
-    totalRoja.innerText = (
-        parseInt(puntuacionRojaHandball.innerText) + 
-        parseInt(puntuacionRojaResistencia.innerText) + 
-        parseInt(puntuacionRojaAjedrez.innerText)
-    ).toString();
+btnRojaResistencia.addEventListener("click", function () {
+    var puntos = parseInt(inputRojaResistencia.value) || 0;
+    puntuacionRojaResistencia.innerText = parseInt(puntuacionRojaResistencia.innerText) + puntos;
+    totalRoja.innerText = parseInt(puntuacionRojaHandball.innerText) + parseInt(puntuacionRojaResistencia.innerText) + parseInt(puntuacionRojaAjedrez.innerText);
     inputRojaResistencia.value = '';
+    compararPuntajes();
+});
+btnRojaAjedrez.addEventListener("click", function () {
+    var puntos = parseInt(inputRojaAjedrez.value) || 0;
+    puntuacionRojaAjedrez.innerText = parseInt(puntuacionRojaAjedrez.innerText) + puntos;
+    totalRoja.innerText = parseInt(puntuacionRojaHandball.innerText) + parseInt(puntuacionRojaResistencia.innerText) + parseInt(puntuacionRojaAjedrez.innerText);
+    inputRojaAjedrez.value = '';
+    compararPuntajes();
 });
 
-btnRojaAjedrez.addEventListener("click", function() {
-    const puntos = parseInt(inputRojaAjedrez.value) || 0;
-    puntuacionRojaAjedrez.innerText = (parseInt(puntuacionRojaAjedrez.innerText) + puntos).toString();
-    totalRoja.innerText = (
-        parseInt(puntuacionRojaHandball.innerText) + 
-        parseInt(puntuacionRojaResistencia.innerText) + 
-        parseInt(puntuacionRojaAjedrez.innerText)
-    ).toString();
-    inputRojaAjedrez.value = '';
-});
