@@ -1,37 +1,37 @@
 // negra
-const puntuacionNegraHandball = document.getElementById("tribuNegra-handball"); 
-const puntuacionNegraResistencia = document.getElementById("resistencia"); 
-const puntuacionNegraAjedrez = document.getElementById("tribuNegra-ajedrez"); 
-const totalNegra = document.getElementById("tribuNegra-total"); 
+const puntuacionNegraHandball = document.getElementById("tribuNegra-handball") as HTMLElement; 
+const puntuacionNegraResistencia = document.getElementById("resistencia") as HTMLElement; 
+const puntuacionNegraAjedrez = document.getElementById("tribuNegra-ajedrez") as HTMLElement; 
+const totalNegra = document.getElementById("tribuNegra-total") as HTMLElement; 
 
 //esto es para ingresar los datos de las puntuaciones(negra)
-const inputNegraHandball = document.getElementById("inputNegra-handball");
-const inputNegraResistencia = document.getElementById("inputNegra-resistencia"); 
-const inputNegraAjedrez = document.getElementById("inputNegra-ajedrez");
+const inputNegraHandball = document.getElementById("inputNegra-handball") as HTMLElement;
+const inputNegraResistencia = document.getElementById("inputNegra-resistencia") as HTMLElement; 
+const inputNegraAjedrez = document.getElementById("inputNegra-ajedrez") as HTMLElement;
 
 // actualiza los balores de los botones(negra)
-const btnNegraHandball = document.getElementById("btnNegra-handball"); 
-const btnNegraResistencia = document.getElementById("btnNegra-resistencia");
-const btnNegraAjedrez = document.getElementById("btnNegra-ajedrez");
+const btnNegraHandball = document.getElementById("btnNegra-handball") as HTMLElement; 
+const btnNegraResistencia = document.getElementById("btnNegra-resistencia") as HTMLElement;
+const btnNegraAjedrez = document.getElementById("btnNegra-ajedrez") as HTMLElement;
 
 //roja
-const puntuacionRojaHandball = document.getElementById("tribuRoja-handball");
-const puntuacionRojaResistencia = document.getElementById("tribuRoja-resistencia"); 
-const puntuacionRojaAjedrez = document.getElementById("tribuRoja-ajedrez");
-const totalRoja = document.getElementById("tribuRoja-total");
+const puntuacionRojaHandball = document.getElementById("tribuRoja-handball") as HTMLElement;
+const puntuacionRojaResistencia = document.getElementById("tribuRoja-resistencia") as HTMLElement; 
+const puntuacionRojaAjedrez = document.getElementById("tribuRoja-ajedrez") as HTMLElement;
+const totalRoja = document.getElementById("tribuRoja-total") as HTMLElement;
 
 //esto es para ingresar los datos de las puntuaciones(roja)
-const inputRojaHandball = document.getElementById("inputRoja-handball"); 
-const inputRojaResistencia = document.getElementById("inputRoja-resistencia");
-const inputRojaAjedrez = document.getElementById("inputRoja-ajedrez");
+const inputRojaHandball = document.getElementById("inputRoja-handball") as HTMLElement; 
+const inputRojaResistencia = document.getElementById("inputRoja-resistencia") as HTMLElement;
+const inputRojaAjedrez = document.getElementById("inputRoja-ajedrez") as HTMLElement;
 
 // actualiza los balores de los botones(roja)
-const btnRojaHandball = document.getElementById("btnRoja-handball"); 
-const btnRojaResistencia = document.getElementById("btnRoja-resistencia");
-const btnRojaAjedrez = document.getElementById("btnRoja-ajedrez");
+const btnRojaHandball = document.getElementById("btnRoja-handball") as HTMLElement; 
+const btnRojaResistencia = document.getElementById("btnRoja-resistencia") as HTMLElement;
+const btnRojaAjedrez = document.getElementById("btnRoja-ajedrez") as HTMLElement;
 
 // bueno esto no hace falta desir que es pero para no mariarme 
-const Tribuganadora = document.getElementById("Ganador");
+var Tribuganadora = document.getElementById("Ganador") as HTMLSelectElement;
 
 //esto es bueno esto es lo que es es el ultimo paso de  este programa el "Ganador" O SEA la Tribu negra 
 function compararPuntajes () {
